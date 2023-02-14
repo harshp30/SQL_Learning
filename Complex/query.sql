@@ -1,0 +1,30 @@
+-- FIND ALL EMPLOYEES --
+SELECT *
+FROM employee;
+
+-- FIND ALL CLIENTS --
+SELECT *
+FROM client;
+
+-- FIND ALL EMPLOYEES ORDERED BY SALARY --
+SELECT *
+FROM employee
+ORDER BY salary DESC;
+
+-- FIND ALL EMPLOYEES ORDERED BY SEX THEN NAME --
+SELECT *
+FROM employee
+ORDER BY sex DESC, first_name, last_name;
+
+-- FIND FIRST 5 EMPLOYEES --
+SELECT *
+FROM employee
+LIMIT 5;
+
+-- FIND FORENAME AND SURNAME OF ALL EMPLOYEES --
+SELECT first_name AS forename, last_name AS surname
+FROM employee;
+
+-- FIND OUT ALL DIFFERENT GENDERS --
+SELECT DISTINCT sex
+FROM employee;

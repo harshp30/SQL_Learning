@@ -1,0 +1,27 @@
+-- FIND NUMBER OF EMPLOYEES --
+SELECT COUNT(emp_id)
+FROM employee;
+
+-- FIND NUMBER OF FEMALE EMPLOYEES BORN AFTER 1970 --
+SELECT COUNT(emp_id)
+FROM employee
+WHERE sex = 'F' AND birth_day > '1970-01-01';
+
+-- FIND AVERGAE OF ALL EMPLOYEES SALARY --
+SELECT AVG(salary)
+FROM employee
+WHERE sex = 'M';
+
+-- FIND SUM OF ALL EMPLOYEE SALARY --
+SELECT SUM(salary)
+FROM employee;
+
+-- FIND HOW MANY MALES AND FEMALES THERE ARE --
+SELECT COUNT(sex), sex
+FROM employee
+GROUP BY sex;
+
+-- FIND TOTAL SALES OF EACH SALESMAN --
+SELECT SUM(total_sales), emp_id
+FROM works_with
+GROUP BY emp_id;
